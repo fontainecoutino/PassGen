@@ -1,0 +1,15 @@
+package main
+
+import (
+	"fmt"
+
+	"github.com/fcoutino/passgen/models"
+)
+
+// GENERATE PASSWORD AND LET USER PICK STRENGTH TYPE (UNSAFE/SAFE/STRONG/SRONGEST)
+// GENERTAE PASSWORD BASED ON ATRTIBUTES (LENGTH/TYPE OF CHARS)
+// GENERATE PASSWORD SUBSTITUTING CHARACTERS IN WORD TO ASCII VALS
+
+func main() {
+	fmt.Println(models.GenerateCharacters(10, ""))
+}
