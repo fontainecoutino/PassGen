@@ -3,12 +3,22 @@
 PassGen is an application to generate secure passwords.
 
 ## Installation
+Make sure you have the latest version of [Go](https://go.dev/) installed. You can download and check the version [here](https://go.dev/doc/install).
 
-<!-- Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar. -->
-**TODO**
+The version required is 1.19.1.
 
+## Build
+
+To build the project.
+
+#### Windows
 ```bash
-code here uwu
+go build src\passgen.go 
+```
+
+#### Mac/Linux
+```bash
+go build src/passgen.go 
 ```
 
 ## Usage
