@@ -15,16 +15,12 @@ import (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "passgen",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
-	// Uncomment the following line if your bare application
-	// has an action associated with it:
-	// Run: func(cmd *cobra.Command, args []string) { },
+	Short: "Password Generator CLI is an application to generate secure passwords.",
+	Long: `Password Generator CLI is an application written in Go. Built to generate
+	secure passwords based on users desires. It can generate multiple types of passwords; 
+	safe, strong, stringest, unsafe(not recommended). It can also turn a word or phrase into
+	a password. Lastly, it also generates passwords based on specific user inputs for length
+	and character types.`,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
