@@ -1,5 +1,5 @@
 /*
-Copyright © 2022 Fontaine Coutino 
+Copyright © 2022 Fontaine Coutino
 */
 package main
 
@@ -7,6 +7,7 @@ import (
 	"fmt"
 
 	"github.com/fcoutino/passgen/models"
+	"github.com/fcoutino/passgen/cmd"
 )
 
 // GENERATE PASSWORD AND LET USER PICK STRENGTH TYPE (UNSAFE/SAFE/STRONG/SRONGEST)
@@ -15,4 +16,5 @@ import (
 
 func main() {
 	fmt.Println(models.GenerateCharacters(10, ""))
+	cmd.Execute()
 }
