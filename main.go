@@ -1,3 +1,6 @@
+/*
+Copyright © 2022 Fontaine Coutino 
+*/
 package main
 
 import (
