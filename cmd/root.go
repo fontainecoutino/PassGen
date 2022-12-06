@@ -18,9 +18,8 @@ var rootCmd = &cobra.Command{
 	Short: "Password Generator CLI is an application to generate secure passwords.",
 	Long: `Password Generator CLI is an application written in Go. Built to generate
 	secure passwords based on users desires. It can generate multiple types of passwords; 
-	safe, strong, stringest, unsafe(not recommended). It can also turn a word or phrase into
-	a password. Lastly, it also generates passwords based on specific user inputs for length
-	and character types.`,
+	safe, strong, strongest, unsafe (not recommended). Custom length and character type
+	can be specified as well. PassGen can also turn a word or phrase into a password.`,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
