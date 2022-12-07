@@ -34,6 +34,13 @@ func GenerateCharacters(length int, types string) string {
 		characters += Lowercase + Uppercase + Numbers + Symbols
 	}
 
+	// shuffle characters to be used
+	inRune := []rune(characters)
+	source.Shuffle(len(inRune), func(i, j int) {
+		inRune[i], inRune[j] = inRune[j], inRune[i]
+	})
+	characters = string(inRune)
+
 	// generate n-sequence of characters from chaacters array
 	var sequence = ""
 	l := length
