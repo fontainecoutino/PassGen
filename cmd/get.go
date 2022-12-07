@@ -8,7 +8,6 @@ import (
 
 	"github.com/fcoutino/passgen/models"
 	"github.com/spf13/cobra"
-	"golang.design/x/clipboard"
 )
 
 func init() {
@@ -77,17 +76,6 @@ var getCmd = &cobra.Command{
 
 		// generate password
 		password := models.GenerateCharacters(passwordLenght, characterType)
-		copyToClipboard(password)
+		CopyToClipboard(password)
 	},
-}
-
-func copyToClipboard(password string) {
-	err := clipboard.Init()
-	if err != nil {
-		fmt.Println("There was an error copying to the clipboard. Here it is printed.")
-		fmt.Println(password)
-		return
-	}
-	clipboard.Write(clipboard.FmtText, []byte(password))
-	fmt.Printf("Copied password to clipboard!\n")
 }
