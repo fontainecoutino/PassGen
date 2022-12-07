@@ -15,13 +15,13 @@ func init() {
 
 	// Local flags
 	getCmd.Flags().StringP("mode", "m", "strong",
-		"Type of password to generate. (unsafe, safe, strong, strongest)")
+		"Type of password to generate (unsafe, safe, strong, strongest)")
 
 	getCmd.Flags().IntP("length", "l", 0,
-		"Password length. Must be greater than 0.")
+		"Password length")
 
 	getCmd.Flags().StringP("type", "t", "",
-		`Types of characters. {l: lowercase, u: uppercase, n: number, s: symbols}
+		`Types of characters {l: lowercase, u: uppercase, n: number, s: symbols}
 		ex. passgen get -t lns
 		flag ignores any other character SO DON'T EVEN TRY`)
 }
@@ -58,7 +58,7 @@ var getCmd = &cobra.Command{
 			passwordLenght = 12
 			characterType = "luns"
 		default:
-			fmt.Println("Mode not valid ... generated strong password anyways.")
+			fmt.Println("Mode not valid ... generated strong password anyways")
 			passwordLenght = 12
 			characterType = "luns"
 		}

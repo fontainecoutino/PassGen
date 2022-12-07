@@ -23,7 +23,7 @@ var tokenizeCmd = &cobra.Command{
 		// Tokenize word
 		flagArgs := cmd.Flags().Args()
 		if len(flagArgs) != 1 {
-			fmt.Println("Error: Include one word to tokenize.")
+			fmt.Println("Error: Include one word to tokenize")
 			cmd.Help()
 			return
 		}
