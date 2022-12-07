@@ -1,5 +1,5 @@
 /*
-Copyright © 2022 Fontain Coutino
+Copyright © 2022 Fontaine Coutino
 */
 package cmd
 
@@ -9,22 +9,6 @@ import (
 	"github.com/fcoutino/passgen/models"
 	"github.com/spf13/cobra"
 )
-
-func init() {
-	rootCmd.AddCommand(getCmd)
-
-	// Local flags
-	getCmd.Flags().StringP("mode", "m", "strong",
-		"Type of password to generate (unsafe, safe, strong, strongest)")
-
-	getCmd.Flags().IntP("length", "l", 0,
-		"Password length")
-
-	getCmd.Flags().StringP("type", "t", "",
-		`Types of characters {l: lowercase, u: uppercase, n: number, s: symbols}
-		ex. passgen get -t lns
-		flag ignores any other character SO DON'T EVEN TRY`)
-}
 
 // getCmd represents the get command
 var getCmd = &cobra.Command{
@@ -78,4 +62,20 @@ var getCmd = &cobra.Command{
 		password := models.GenerateCharacters(passwordLenght, characterType)
 		CopyToClipboard(password)
 	},
+}
+
+func init() {
+	rootCmd.AddCommand(getCmd)
+
+	// Local flags
+	getCmd.Flags().StringP("mode", "m", "strong",
+		"Type of password to generate (unsafe, safe, strong, strongest)")
+
+	getCmd.Flags().IntP("length", "l", 0,
+		"Password length")
+
+	getCmd.Flags().StringP("type", "t", "",
+		`Types of characters {l: lowercase, u: uppercase, n: number, s: symbols}
+		ex. passgen get -t lns
+		flag ignores any other character SO DON'T EVEN TRY`)
 }

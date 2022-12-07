@@ -11,12 +11,13 @@ func TokenizeWord(word string) string {
 	for _, ch := range word {
 		tokenized += pickRandomTokenFromCharacter(string(ch))
 	}
-	if word == tokenized {
+	if word == tokenized {	// word was the same after tokenization, so retry
 		return TokenizeWord(word)
 	}
 	return tokenized
 }
 
+// based on letter map, pick a random valid character
 func pickRandomTokenFromCharacter(char string) string {
 	source := rand.New(rand.NewSource(time.Now().UnixNano())) // to set random seeding
 	letters := getLettersMap()

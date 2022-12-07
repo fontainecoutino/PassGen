@@ -8,14 +8,16 @@ import (
 	"golang.design/x/clipboard"
 )
 
-// Shared functions
-func CopyToClipboard(password string) {
+// SHARED FUNCTIONS
+
+// Copy a string to the clipboard
+func CopyToClipboard(seq string) {
 	err := clipboard.Init()
 	if err != nil {
 		fmt.Println("There was an error copying to the clipboard. Here it is printed.")
-		fmt.Println(password)
+		fmt.Println(seq)
 		return
 	}
-	clipboard.Write(clipboard.FmtText, []byte(password))
-	fmt.Printf("Copied password to clipboard!\n")
+	clipboard.Write(clipboard.FmtText, []byte(seq))
+	fmt.Printf("Copied to clipboard!\n")
 }
